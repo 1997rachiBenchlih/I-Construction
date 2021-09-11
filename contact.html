@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+            <nav class="contact">
+                <a><i class="glyphicon glyphicon-envelope"></i> ICONSTRUCTION@gmail.com</a>
+                <a><i class="fa fa-phone"></i> +212 6 61 46 79 13</a>
+                <a><i class="fas fa-clock"></i>Open Hours: 09:00 am - 06:00 pm</a>
+            </nav>
+        </div>
+
+        <div class="navbar">
+            <img src="logo.png" class="logo">
+            <ul>
+                <li>
+                    <a href="index.html">HOME</a>
+                </li>
+                <li>
+                    <a href="aboutUs.html">ABOUT US</a>
+                </li>
+                <li>
+                    <a href="service.html">SERVICES</a>
+                </li>
+                <li>
+                    <a href="project.html">PROJECTS</a>
+                </li>
+                <li>
+                    <a href="contact.html">CONTACT US</a>
+                </li>
+            </ul>
+        </div>
+        <div class="container">
+            <div class="content-box">
+                <div class="left">
+                    <p>We will be glad to srve you...</p>
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-google"></i>
+                </div>
+                <div class="right">
+                    <form method="POST" action="javascript:sendMail()"></form>
+                    <h2>Contact Us</h2>
+                    <input type="text" class="field" id="name" placeholder="Your Name">
+                    <input type="email" class="field" id="email" placeholder="Your Email">
+                    <input type="text" class="field" id="phone" placeholder="Your Phone">
+                    <textarea class="field area" id="message" placeholder="Message"></textarea>
+                    <button class="btn" type="submit" onclick="sendMail()">Send</button>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <script async src='https://stackwhats.com/pixel/f9a4a714cd724dbae513a1cdb24e6d'></script>
+</body>
+<script language="Javascript" type="text/javascript">
+    function sendMail() {
+        var url = "mailto:" + encodeURIComponent(document.getElementById("email").value) +
+            "?subject=" + encodeURIComponent(document.getElementById("name").value) +
+            "&body=" + encodeURIComponent(document.getElementById("message").value);
+        document.location = url;
+    }
+</script>
+
+</html>
